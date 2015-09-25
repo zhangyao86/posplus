@@ -1,11 +1,11 @@
 #include "8583.h"
 
-#define INITFIELD(inum, ilength, itype) { fields[inum].type=itype; field[inum].length = ilength; }
+#define INITFIELD(inum, ilength, itype) { fields[inum].type=itype; fields[inum].length = ilength; }
 //init field default type and length 
-iso8583Trans::iso8583Trans()
+iso8583Trans::iso8583Trans():fields(52)
 {
-	INITFIELD( 1,  4,  TYPE_N);		
-	INITFIELD( 2, 19,  TYPE_LLVAR);		
+	INITFIELD( 1,  4,  TYPE_N);
+	INITFIELD( 2, 19,  TYPE_LLVAR);
 	INITFIELD( 3,  6,  TYPE_N);		
 	INITFIELD( 4, 12,  TYPE_N);		
 	INITFIELD(11,  6,  TYPE_N);		
@@ -36,4 +36,9 @@ iso8583Trans::iso8583Trans()
 	INITFIELD(61, 29,  TYPE_LLLVAR);
 	INITFIELD(62,512,  TYPE_LLLVAR);
 	INITFIELD(64,  8,  TYPE_N);
+}
+
+int main()
+{
+	return 0;
 }
