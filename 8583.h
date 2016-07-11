@@ -16,7 +16,7 @@ public:
 	iso8583Field() {};
 };
 
-class iso8583Trans
+class iso8583Packet
 {
 public:
 	BYTE tpdu[5];
@@ -25,7 +25,7 @@ public:
 
 	vector<iso8583Field> fields;
 public:
-	iso8583Trans();
+	iso8583Packet();
 	//setField(int num, string value);
 };
 
